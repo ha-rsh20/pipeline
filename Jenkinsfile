@@ -67,7 +67,7 @@ pipeline {
         }
             steps {
                 script{echo 'deploying the application'
-                withCredentials([usernamePassword(credentialsId: 'docker', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
+                withCredentials([usernamePassword(credentialsId: 'dcece950-7cd5-4829-a0e2-db0b775891f0', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
                     sh "echo ${PASSWORD} | docker login -u ${USERNAME} --password-stdin"
                     sh "docker push harsh0120/jenkins:${IMAGE_NAME}"
                 }}
