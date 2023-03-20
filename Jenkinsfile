@@ -72,7 +72,7 @@ pipeline {
                     sh "docker push harsh0120/jenkins:${IMAGE_NAME}"
                 }}
                 
-             } */
+             }*/
         }
         stage('commit version update'){
             steps{
